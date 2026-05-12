@@ -4,7 +4,7 @@ import requests
 app = Flask(__name__)
 
 # Backend Private IP
-BACKEND_URL = "http://internal-Internal-LB-1037539579.us-east-1.elb.amazonaws.com/api/message"
+BACKEND_URL = "http://internal-Internal-ALB-1367237321.us-east-1.elb.amazonaws.com/api/message"
 
 HTML_PAGE = """
 
@@ -293,4 +293,4 @@ def get_data():
     return jsonify(response.json())
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=81)
+    app.run(host='0.0.0.0', port=5000)
