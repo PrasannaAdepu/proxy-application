@@ -258,9 +258,7 @@ async function getData() {
 
     try {
 
-        const response = await fetch(
-            "http://External-LB-472751323.us-east-1.elb.amazonaws.com/api/message"
-        );
+        const response = await fetch("/api/message");
 
         const data = await response.json();
 
